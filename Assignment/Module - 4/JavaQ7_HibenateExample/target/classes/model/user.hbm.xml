@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>  
+    <class name="model.User" table="user">  
+        <id name="uid" column="uid">  
+            <generator class="native"/>  
+        </id>  
+         <property name="firstName" column="first_name" type="string"/>  
+        <property name="lastName" column="last_name" type="string"/>  
+        <property name="email" column="email" type="string"/>  
+        <property name="mobile" column="mobile" type="string"/>  
+        <property name="password" column="password" type="string"/>  
+        <property name="gender" column="gender" type="string"/>  
+    </class>  
+</hibernate-mapping>
