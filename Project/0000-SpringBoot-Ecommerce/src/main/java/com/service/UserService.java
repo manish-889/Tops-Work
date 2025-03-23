@@ -10,5 +10,6 @@ public interface UserService {
 	public List<User> getAllUser();
 	public void deleteUser(int id);
 	public User getUserById(int id);
+	public User getUserByEmailAndPass(String email, String password);
 	
 }

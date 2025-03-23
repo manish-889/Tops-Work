@@ -73,15 +73,15 @@
 							<h2>Login Form</h2>
 						</div>
 
-						<form action="#" method="post">
+						<form action="loginAction" method="post">
 							<div class="row">
 								<div class="col-md-12 mb-3">
-									<input type="text" class="form-control" id="uname" value=""
-										placeholder="Username" required>
+									<input type="text" class="form-control" id="email" name="email" value=""
+										placeholder="Email" required>
 								</div>
 								<div class="col-md-12 mb-3">
-									<input type="text" class="form-control" id="email" value=""
-										placeholder="Email" required>
+									<input type="text" class="form-control" id="pass" value="" name="pass"
+										placeholder="Password" required>
 								</div>
 
 								<div class="col-12 mb-3">
@@ -107,7 +107,7 @@
 					<div class="single_widget_area">
 						<!-- Logo -->
 						<div class="footer-logo mr-50">
-							<a href="index.html"><img src="img/core-img/logo2.png" alt=""></a>
+							<a href="index.html"><img src="./Img/VibeCart2.png" alt=""></a>
 						</div>
 						<!-- Copywrite Text -->
 						<p class="copywrite">
@@ -140,15 +140,14 @@
 								<div class="collapse navbar-collapse" id="footerNavContent">
 									<ul class="navbar-nav ml-auto">
 										<li class="nav-item active"><a class="nav-link"
-											href="index.html">Home</a></li>
-										<li class="nav-item"><a class="nav-link" href="shop.html">Shop</a>
+											href="/">Home</a></li>
+										<li class="nav-item"><a class="nav-link" href="shop">Shop</a>
+										</li>
+										
+										<li class="nav-item"><a class="nav-link" href="cart">Cart</a>
 										</li>
 										<li class="nav-item"><a class="nav-link"
-											href="product-details.html">Product</a></li>
-										<li class="nav-item"><a class="nav-link" href="cart.html">Cart</a>
-										</li>
-										<li class="nav-item"><a class="nav-link"
-											href="checkout.html">Checkout</a></li>
+											href="checkout">Checkout</a></li>
 									</ul>
 								</div>
 							</nav>

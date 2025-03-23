@@ -20,9 +20,10 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int productId;
 	private String productName;
-	private int price;
+	private double price;
 	private int quantity;
 	private String imageName;
+	private String productDescription;
 
 	@ManyToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
 	@JoinColumn(name = "category")
@@ -30,6 +31,26 @@ public class Product {
 	
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
 	List<Cart> cart;
+	
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+	List<OrderItem> orderItems;
+	
+
+	public String getProductDescription() {
+		return productDescription;
+	}
+
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
+	}
+
+	public List<OrderItem> getOrderItems() {
+		return orderItems;
+	}
+
+	public void setOrderItems(List<OrderItem> orderItems) {
+		this.orderItems = orderItems;
+	}
 
 	public String getImageName() {
 		return imageName;
@@ -63,11 +84,11 @@ public class Product {
 		this.productName = productName;
 	}
 
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 

@@ -16,14 +16,23 @@ public class Cart {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int cartId;
+	private int productQuantity;
 
 	@ManyToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-	@JoinColumn(name = "product")
+	@JoinColumn(name = "product_id")
 	Product product;
 
 	@ManyToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-	@JoinColumn(name = "user")
+	@JoinColumn(name = "user_id")
 	User user;
+	
+	public int getProductQuantity() {
+		return productQuantity;
+	}
+
+	public void setProductQuantity(int productQuantity) {
+		this.productQuantity = productQuantity;
+	}
 
 	public int getCartId() {
 		return cartId;

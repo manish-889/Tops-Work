@@ -12,5 +12,6 @@ public interface ProductService {
 	public List<Category> getAllCategory();
 	public Product getProductById(int id);
 	public void deleteProduct(int id);
+	public List<Product> getProductByCategory(Category c);
 	
 }

@@ -59,4 +59,11 @@ public class ProductServiceImp implements ProductService {
 		productRepo.deleteById(id);
 	}
 
+	@Override
+	public List<Product> getProductByCategory(Category c) {
+		// TODO Auto-generated method stub
+		return productRepo.findByCategory(c);
+	}
+
+
 }

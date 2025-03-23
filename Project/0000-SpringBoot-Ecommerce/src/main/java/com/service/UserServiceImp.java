@@ -38,4 +38,10 @@ public class UserServiceImp implements UserService {
 		return repo.findById(id).orElseThrow();
 	}
 
+	@Override
+	public User getUserByEmailAndPass(String email, String password) {
+		User user = repo.findByEmailAndPassword(email, password);
+		return user;
+	}
+
 }

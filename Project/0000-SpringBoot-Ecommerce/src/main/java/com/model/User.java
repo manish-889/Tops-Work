@@ -28,6 +28,9 @@ public class User {
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	List<Cart> cart;
 
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+	List<Order> orders;
+	
 	public String getConfirmPassword() {
 		return confirmPassword;
 	}
